@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
 import java.nio.ByteBuffer;
+import java.util.Map;
 
 import org.java_websocket.WebSocket;
 import org.java_websocket.WebSocketImpl;
@@ -158,6 +159,11 @@ public class AutobahnClientTest extends WebSocketClient {
 		FrameBuilder builder = (FrameBuilder) frame;
 		builder.setTransferemasked( true );
 		getConnection().sendFrame( frame );
+	}
+	@Override
+	public Map<Object, Object> getAttributes() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

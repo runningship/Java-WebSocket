@@ -3,6 +3,7 @@ package org.java_websocket;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.NotYetConnectedException;
+import java.util.Map;
 
 import org.java_websocket.drafts.Draft;
 import org.java_websocket.framing.Framedata;
@@ -121,4 +122,6 @@ public interface WebSocket {
 	 * If the opening handshake has not yet happened it will return null.
 	 **/
 	public abstract String getResourceDescriptor();
+	
+	public abstract Map<Object,Object> getAttributes();
 }

@@ -9,7 +9,9 @@ import java.nio.channels.NotYetConnectedException;
 import java.nio.channels.SelectionKey;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -104,6 +106,7 @@ public class WebSocketImpl implements WebSocket {
 	
 	private String resourceDescriptor = null;
 
+	public Map<Object,Object> attrs = new HashMap<Object,Object>();
 	/**
 	 * crates a websocket with server role
 	 */
@@ -732,6 +735,11 @@ public class WebSocketImpl implements WebSocket {
 	@Override
 	public String getResourceDescriptor() {
 		return resourceDescriptor;
+	}
+
+	@Override
+	public Map<Object,Object> getAttributes() {
+		return attrs;
 	}
 
 }
